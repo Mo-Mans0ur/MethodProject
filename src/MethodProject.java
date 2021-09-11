@@ -39,7 +39,7 @@ public class MethodProject {
         System.out.println("enter the third side of the triangle");
         double c = scanner.nextDouble();
 
-
+        System.out.println("the area of the triangle is " + areaOfTriangle(a,b,c));
 
 }      //task 1
     public static double min(double number1, double number2, double number3) {
@@ -69,5 +69,12 @@ public class MethodProject {
     }
 
     //task 4
+    public static double areaOfTriangle(double a, double b, double c) {
+       double s;
+       s = (a+b+c)/2;
+        double area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        return area;
+
+    }
 
 }
