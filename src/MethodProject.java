@@ -1,4 +1,3 @@
-import java.awt.geom.Area;
 import java.util.Scanner;
 
 public class MethodProject {
@@ -32,6 +31,7 @@ public class MethodProject {
         */
 
         //task 4
+        /*
         System.out.println("enter the first side of the triangle");
         double a = scanner.nextDouble();
         System.out.println("enter the second side of the triangle");
@@ -40,6 +40,17 @@ public class MethodProject {
         double c = scanner.nextDouble();
 
         System.out.println("the area of the triangle is " + areaOfTriangle(a,b,c));
+        */
+
+        //task 5
+        System.out.println("please enter password: ");
+        String password = scanner.next();
+        if (isValid(password)) {
+            System.out.println("welcome user ");
+        } else {
+            System.out.println("password invalid");
+        }
+
 
 }      //task 1
     public static double min(double number1, double number2, double number3) {
@@ -77,4 +88,22 @@ public class MethodProject {
 
     }
 
+    //task 5
+    public static boolean isValid(String password) {
+        if (password.length() < 8) {
+            return false;
+        }else {
+            char character;
+            int count = 1;
+            for (int i = 0; i < password.length() - 1; i++) {
+                character = password.charAt(i);
+                if (!Character.isLetterOrDigit(character)) {
+                    return false;
+                } else if (Character.isDigit(character)) {
+                    i++;
+                }
+            }
+        }
+        return true;
+    }
 }
