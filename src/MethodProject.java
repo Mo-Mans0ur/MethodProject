@@ -43,6 +43,7 @@ public class MethodProject {
         */
 
         //task 5
+        /*
         System.out.println("please enter password: ");
         String password = scanner.next();
         if (isValid(password)) {
@@ -50,7 +51,10 @@ public class MethodProject {
         } else {
             System.out.println("password invalid");
         }
+        */
 
+        //task 6
+        System.out.println(printNumbers(15));
 
 }      //task 1
     public static double min(double number1, double number2, double number3) {
@@ -105,5 +109,16 @@ public class MethodProject {
             }
         }
         return true;
+    }
+
+    //task 6
+    public static int printNumbers(int maxNumb) {
+        int printNumbers = maxNumb;
+        String brackets = " ";
+        for (int i = 1; i <= printNumbers; i++) {
+            brackets =  brackets + "[" + i + "]" ;
+        }
+        System.out.println(brackets);
+        return printNumbers;
     }
 }
